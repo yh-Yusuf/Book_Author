@@ -1,0 +1,18 @@
+<h1>Data</h1>
+
+{% for i in info %}
+Title - {{i.title}}  <br>
+Pages - {{i.no_pages}}  <br>
+Created_By - {{i.created_by}}  <br><br>
+
+<hr>
+
+{% if i.image %}
+<img src = "{{i.image.url}}" , width="100px" , height="100px"/>
+
+{% endif %}
+
+{% endfor %}
+
+<a href = {% url 'author-form' %} > Create Author</a>
+<a href = {% url 'book-form' %} > Create Book</a>
